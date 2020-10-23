@@ -23,6 +23,7 @@ import { MainanComponent } from './components/product/mainan/mainan.component';
 import { MedicineComponent } from './components/product/medicine/medicine.component';
 import { EbookComponent } from './components/product/ebook/ebook.component';
 import { FoodsComponent } from './components/product/foods/foods.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 
@@ -43,6 +44,7 @@ import { FoodsComponent } from './components/product/foods/foods.component';
     MedicineComponent,
     EbookComponent,
     FoodsComponent,
+    SignupComponent,
     
   ],
   imports: [
