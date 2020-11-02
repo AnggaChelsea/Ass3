@@ -27,28 +27,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-PT. ACM Indonesia, badan sertifikasi ISO sedang mencari kandidat untuk posisi :
-1. Admin Finance (Magang)
-Kualifikasi :
-- Min. Lulusan SMA/SMK
-- Memahami pengetahuan dasar finance
+Alisha (Community Engagement di MyRobin.id), [07.10.20 14:36]
+PT Inti Ganda Perdana (Group ASTRA Otoparts)
 
-2. Lead Auditor (URGENT)
-Kualifikasi :
-- Laki-laki
-- Min. S1
-- Memiliki sertifikat Lead Auditor (LAC) untuk standard ISO 9001, ISO 14001, ISO 45001 minimal bersertifikat 2 standard ISO Lead Auditor
-- Usia Max. 45 tahun
-- berpengalaman dibidang yang sama min. 1 tahun
+Membuka lowongan : magang IT
 
-3. IT
-Kualifikasi :
-- Min. D3/S1
-- Bisa Photoshop / Design Grafis
-- Maintenance & monitoring asset kantor
-- Website
-- Memahami jaringan LAN & Internet
+durasi magang 6 bulan
+fresh graduate atau masih kuliah dipersilakan melamar
+penempatan: kelapa gading, jakarta utara
 
-Penempatan di Jakarta
-Untuk CV terbaru dapat dikirimkan ke alamat email : hr.recruitment@acm-indonesia.com & cc : nuraini@acm-indonesia.com
-Dengan menuliskan subjek email : nama_posisi yang dilamar
+Cara melamar ikuti keterangan tertera di gambar berikut: 
+https://m.myrobin.id/job/detail/magang-it-untuk-pt-inti-ganda-perdana-group-astra-otoparts-jakarta/
