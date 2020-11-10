@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../models/product';
+import { Observable} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { ProductService } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +13,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  product$: Observable<Product[]>;
 
-  ngOnInit(): void {
+  regis;
+
+  constructor(private http:HttpClient, private productService:ProductService, private cartService: CartService)
+  {
+
   }
+
+  ngOnInit(){
+    this.product$ = this.productService.getProduct();
+    console.log(this.product$)
+  }
+
+
+  // addCart(product){
+  //  this.cartService.addCart({
+  //    product,
+  //    quantity:1
+  //  })
+  // }
 
 }

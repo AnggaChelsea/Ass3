@@ -1,0 +1,9 @@
+<h2 class="productlaris">Product Laris</h2>
+<div class="scrollmenu">
+<div style="margin-top: 20px;">
+  <figure class="wave" *ngFor="product of product$ | async ">
+    <img src="https://i.pinimg.com/564x/a0/d8/1b/a0d81bf2810594aeb6670030aae48745.jpg" alt="rajni">
+    <figcaption><a class="btn btn-primary" (click)="addCart(produk)">Add Cart</a></figcaption>
+  </figure>
+</div>
+</div>

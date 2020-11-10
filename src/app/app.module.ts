@@ -1,61 +1,52 @@
-//angular server
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartService } from './services/cart.service';
+// import { MaterialModule } from './material/material.module';
 
-//module
-import { MaterialModule } from './material/material.module';
-import { AppRoutingModule } from './app-routing.module';
-
+//service
+import { AuthService  } from './services/auth/auth.service';
+import { UserService } from './services/user.service';
+import { ProductService } from './services/product.service';
+import { AuthGuard } from './services/auth/auth.guard';
+import { AuthInterceptor } from './services/auth/auth.interceptor';
 //component
+import { SigninComponent } from './components/user/signin/signin.component';
+import { SignupComponent } from './components/user/signup/signup.component';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { NotfoundComponent } from './components/notfound/notfound.component';
+import { CartComponent } from './components/cart/cart.component';
+import { UserComponent } from './components/user/user.component';
+import { HomeComponent } from './components/home/home.component';
+import { BannerComponent } from './components/banner/banner.component';
+
+
+import { InputProductComponent } from './components/input-product/input-product.component';
 import { ProductComponent } from './components/product/product.component';
-import { PakaianComponent } from './components/product/pakaian/pakaian.component';
-import { MainanComponent } from './components/product/mainan/mainan.component';
-import { MedicineComponent } from './components/product/medicine/medicine.component';
-import { EbookComponent } from './components/product/ebook/ebook.component';
-import { FoodsComponent } from './components/product/foods/foods.component';
-import { SignupComponent } from './components/signup/signup.component';
-
-
-
+import { DetailproductComponent } from './components/product/detailproduct/detailproduct.component';
+import { CommentsComponent } from './components/user/comments/comments.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ProductorderComponent } from './components/productorder/productorder.component';
+import { AuthModule } from './routes/auth/auth.module';
+import { ProductModule } from './routes/product/product.module';
+import { CallactionComponent } from './components/callaction/callaction.component';
+import { LengkapiprofileComponent } from './components/user/lengkapiprofile/lengkapiprofile.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    NavbarComponent,
-    BannerComponent,
-    HomeComponent,
-    FooterComponent,
-    ProfileComponent,
-    NotfoundComponent,
-    ProductComponent,
-    PakaianComponent,
-    MainanComponent,
-    MedicineComponent,
-    EbookComponent,
-    FoodsComponent,
-    SignupComponent,
-    
+  declarations: [AppComponent, SigninComponent,SignupComponent,BannerComponent, HeaderComponent, FooterComponent, CartComponent,  UserComponent,InputProductComponent, DetailproductComponent, HomeComponent, CommentsComponent, ProductComponent, CheckoutComponent, ProductorderComponent, CallactionComponent, LengkapiprofileComponent],
+  imports: [BrowserModule,  AppRoutingModule, BrowserAnimationsModule, FormsModule,
+    HttpClientModule, ReactiveFormsModule, AuthModule, ProductModule, ],
+  providers: [ProductService,AuthGuard , CartService, AuthService, UserService,
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi:true
+    }
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    HttpClientModule,
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

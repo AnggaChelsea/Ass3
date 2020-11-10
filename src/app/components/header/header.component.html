@@ -1,0 +1,24 @@
+
+<header class="mdc-top-app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu" routerLink="/">home</button>
+      <a data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary" *ngIf="!this.authService.login()">Login</a>
+      <a href="#" class="btn btn-danger" *ngIf="this.authService.getToken()" (click)="this.authService.logout()">Logout</a>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <h2 *ngIf="authService.getToken()">{{this.authService.username$}}</h2>
+      <button (click)="onCart = !onCart" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite" data-toggle="modal" data-target="#exampleModal">local_grocery_store
+      </button><span class="badge badge-success badge-pill">{{count}}</span><h3 class="title">
+      Your Cart <button class="cart-close" type="button" (click)="onCart = !onCart">Close</button>
+    </h3>
+      <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+    </section>
+  </div>
+</header>
+<div class="cart">
+<app-cart></app-cart>
+</div>
+<div class="signin">
+  <app-signin></app-signin>
+</div>

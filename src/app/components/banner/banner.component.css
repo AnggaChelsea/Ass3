@@ -1,9 +1,60 @@
+.bannerBg {
+  background-image: url('../../../assets/img/banner/banner.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border-radius: 10px;
+  widht:100%;
+  height: 350px;
+}
+
+.h1title {
+  color: black;
+}
+.bannerSize{
+  height: 340px;
+  widht:100%;
+}
 img{
-	position: relative;
-    width:100%;
-    height:300px;
-    border-radius:10px;
-    box-shadow: 10px 10px 10px black;
-    margin-top: 20px;
-    top:120px;
+  widht:180px;
+  height: 170px;
+}
+
+.titlegreen {
+  font-weight: bold;
+  font-size: 25px;
+  color: greenyellow;
+  position:relative;
+  margin-top:100px;
+}
+
+.newproduct {
+  text-align: center;
+  font-weight: bold;
+}
+.containerCard{
+  position: relative;
+}
+.bannerku img{
+  widht:100%;
+  height: 350px;
+}
+div.scrollmenu {
+  background-color: black;
+  overflow: auto;
+  white-space: nowrap;
+  margin-top:20px;
+  position:relative;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: orange;
 }

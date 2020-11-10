@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Register first</h2>
+    </div>
+    <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label class="col-md-4">User Name</label>
+          <input [(ngModel)]="datauser.username" type="text" class="form-control" name="username"/>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Email</label>
+          <input [(ngModel)]="datauser.email" type="email" class="form-control" name="email"/>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Password</label>
+            <input [(ngModel)]="datauser.password" type="password" class="form-control" name="password"/>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4">Nama Depan</label>
+              <input [(ngModel)]="datauser.namadepan" type="text" class="form-control" name="namadepan"/>
+              </div>
+              <div class="form-group">
+                <label class="col-md-4">Nama Belakang</label>
+                <input [(ngModel)]="datauser.namabelakang" type="text" class="form-control" name="namabelakang"/>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2">Umur</label>
+                  <input [(ngModel)]="datauser.umur" type="text" class="form-control" name="umur"/>
+                  </div>
+          <div class="form-group">
+            <button (click)="signupUser()" type="submit" class="btn btn-primary">Add</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

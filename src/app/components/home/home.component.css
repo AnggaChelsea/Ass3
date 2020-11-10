@@ -1,0 +1,13 @@
+h2{
+    text-align: center;
+}
+.banner1{
+  position:relative;
+}
+.h2flash{
+  color: red;
+  position:absolute;
+}
+.products{
+  position:relative;
+}

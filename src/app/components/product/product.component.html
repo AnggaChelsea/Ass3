@@ -1,9 +1,100 @@
-<div class="container">
-		<div class="card1">
-			<img src="../../../assets/image/food.gif" alt="food spicy">
-		</div>
-		<div class="card2">
-			<img src="../../../assets/image/drink.gif" alt="fresh Drink">
-		</div>
 
+<div class="container">
+
+<div class="row">
+    <div class="row">
+        <div class="col-md-3 col-sm-6" *ngFor="let produc of product$ | async">
+            <div class="product-grid5">
+                <div class="product-image5">
+                    <a href="#">
+                        <img  class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-2.jpg">
+                        <img  class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-2.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" (click)="handelAddToCart(item)" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <a routerLink="product/:id" class="select-options"><i class="fa fa-arrow-right"></i>{{produc.category}}</a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">{{produc.name}}</a></h3>
+                    <div class="price">Rp{{produc.price}} - Rp {{produc.price}}</div>
+                </div>
+            </div>
+        </div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination pg-blue">
+    <li class="page-item ">
+      <a class="page-link" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link">1</a></li>
+    <li class="page-item active">
+      <a class="page-link">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link">3</a></li>
+    <li class="page-item ">
+      <a class="page-link">Next</a>
+    </li>
+  </ul>
+</nav>
+<hr>
+<div class="callaction">
+<app-callaction></app-callaction>
 </div>
+<div class="container my-4">
+
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+    <!--Controls-->
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating left" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+
+        <div class="row" *ngFor="let produc of product$ | async">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                alt="Card image cap">
+              <div class="card-body" >
+                <h4 class="card-title">{{produc.name}}</h4>
+                <p class="card-text">This Jacket New from india</p>
+                <a class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 clearfix d-none d-md-block" *ngFor="let produc of product$ | async">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">||</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
